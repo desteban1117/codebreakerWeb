@@ -1,6 +1,6 @@
 package main
 
-var secretCode string = ""
+var secretCode string = "1234"
 func codebreaker(code string) string {
 
   var answer string
