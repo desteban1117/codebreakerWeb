@@ -7,8 +7,7 @@ import "os"
 func main() {
 
 	port := os.Getenv("PORT")
-  if port == ""
-  {
+  if port == ""{
     port = "8081"
   }
 	router := gin.Default()
