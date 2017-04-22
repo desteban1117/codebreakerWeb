@@ -27,5 +27,10 @@ func main() {
 		c.String(http.StatusOK, "Hello")
 	})
 
+	router.GET("/", func(c *gin.Context) {
+
+		c.String(http.StatusOK, "Hello mundo")
+	})
+	
 	router.Run(":"+ port)
 }
