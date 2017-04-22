@@ -2,8 +2,15 @@ package main
 
 import "github.com/gin-gonic/gin"
 import "net/http"
+import "os"
 
 func main() {
+
+	port := os.Getenv("PORT")
+  if port == ""
+  {
+    port = "8081"
+  }
 	router := gin.Default()
 
 	// This handler will match /user/john but will not match neither /user/ or /user
@@ -21,5 +28,5 @@ func main() {
 		c.String(http.StatusOK, "Hello")
 	})
 
-	router.Run(":8080")
+	router.Run(":"+ port)
 }
